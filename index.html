@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Father's Day Tribute</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+
+    <header>
+        <h1>Happy Father's Day</h1>
+        <p class="typing" id="typedText"></p>
+    </header>
+
+    <section>
+        <h2>💡 Things I Learned From You</h2>
+
+        <div class="card">
+            <p><strong>Strength is quiet.</strong><br>You never had to raise your voice to be respected. Your presence
+                alone was power.</p>
+        </div>
+
+        <div class="card">
+            <p><strong>Patience is love in action.</strong><br>Even on your toughest days, you gave time, energy, and
+                wisdom without hesitation.</p>
+        </div>
+
+        <div class="card">
+            <p><strong>Consistency builds trust.</strong><br>You showed up. Always. No matter what. Even Sometimes you
+                are busy with work you , we understand. That taught me what reliability means.</p>
+        </div>
+
+        <div class="card">
+            <p><strong>Laughter makes everything lighter.</strong><br>Your jokes? Questionable. But the joy behind them?
+                Unmatched.</p>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>📸 Favorite Moments Together</h2>
+        <div class="card">
+            <p>Whether it was fishing by the river, fixing old gadgets, or watching movies late into the night — those
+                moments were more than fun. They were the foundation of our bond.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>🧠 Your Legacy</h2>
+        <div class="card">
+            <p>I walk into the world with your lessons in my heart. You didn’t just raise a child — you built a future.
+                And I’m honored to carry your spirit forward. Even though we don't talk much pops, i still appreciate
+                you.</p>
+        </div>
+    </section>
+    <section>
+        <h2>📸 Favorite Moments Together</h2>
+        <div class="slider">
+            <div class="slides">
+                <img src="1750005733705.jpg" alt="Memory 1">
+                <img src="1750005791763.jpg" alt="Memory 2">
+                <img src="1750005823095.jpg" alt="Memory 3">
+                <img src="1750005891499.jpg" alt="Memory 1">
+                <img src="Screenshot_20250615-164148~2.png" alt="Memory 2">
+                <img src="Screenshot_20250615-164434~2.png" alt="Memory 3">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🌟 A Tribute to You</h2>
+        <div class="card">
+            <p>Today, I celebrate you. Not just as a father, but as a hero, a mentor, and my forever friend. Your love
+                is the light that guides me.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>💌 A Message to You</h2>
+        <div class="card">
+            <p>Thank you for being you. For every sacrifice, every lesson, and every moment of love. I hope this day
+                brings you as much joy as you’ve given me.  I LOVE YOU POPS ❤❤  And i Know you love indian songs so here is one below.</p>
+        </div>
+
+<div class="audio-wrapper">
+  <h3>🎵 Background Vibes</h3>
+  <audio id="bg-music" controls autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+
+    
+
+
+
+
+    <footer>
+        Crafted with 💙 by Sid • The Multi Developer • 2025
+    </footer>
+
+
+
+
+
+</body>
+<script>
+  window.addEventListener('load', () => {
+    const music = document.getElementById('bg-music');
+    const playPromise = music.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // If browser blocks autoplay with sound
+        document.body.addEventListener('click', () => {
+          music.play();
+        }, { once: true });
+      });
+    }
+  });
+</script>
+
+
+
+
+<script>
+    const text = "You're my hero, my guide, and my forever friend.";
+    let i = 0;
+    const speed = 50;
+    const typedText = document.getElementById("typedText");
+
+    function typeWriter() {
+        if (i < text.length) {
+            typedText.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    window.onload = typeWriter;
+</script>
+
+</html>
